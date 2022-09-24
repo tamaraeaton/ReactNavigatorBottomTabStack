@@ -1,13 +1,20 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import type {Node} from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {NavigationContainer} from '@react-navigation/native';
+import Stack1 from './app/stack/stack1/Stack1';
 
-const App: () => Node = () => {
+const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Tamara's Mobile App 1</Text>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <NavigationContainer children={{}}>
+        <Stack1></Stack1>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default App;
