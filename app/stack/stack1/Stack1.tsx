@@ -9,10 +9,14 @@ const Stack = createStackNavigator();
 const Stack1 = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Bottom tabs" component={BottomTabs}></Stack.Screen>
+      <Stack.Screen
+        name="Bottom tabs"
+        component={BottomTabs}
+        options={{headerShown: false}}></Stack.Screen>
       <Stack.Screen
         name="Stack 1 screen 2"
-        component={Stack1Screen2}></Stack.Screen>
+        component={Stack1Screen2}
+        options={{headerBackTitle: 'Back'}}></Stack.Screen>
     </Stack.Navigator>
   );
 };

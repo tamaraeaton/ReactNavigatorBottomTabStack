@@ -10,9 +10,12 @@ const Stack1 = () => {
   return (
     <BottomTab.Navigator>
       <BottomTab.Screen
-        name="Stack 1"
+        name="Stack 1 screen 1"
         component={Stack1Screen1}></BottomTab.Screen>
-      <BottomTab.Screen name="Stack 2" component={Stack2}></BottomTab.Screen>
+      <BottomTab.Screen
+        name="Stack 2"
+        component={Stack2}
+        options={{headerShown: false}}></BottomTab.Screen>
     </BottomTab.Navigator>
   );
 };

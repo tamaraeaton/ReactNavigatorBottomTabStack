@@ -11,7 +11,7 @@ const Stack1Screen2 = () => {
       <Button
         title="go to stack 1 screen 1"
         onPress={() => {
-          navigation.navigate('Stack 1');
+          navigation.navigate('Stack 1 screen 1');
         }}></Button>
     </SafeAreaView>
   );
