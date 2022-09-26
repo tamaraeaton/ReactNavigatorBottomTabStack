@@ -1,10 +1,37 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {RouteProp} from '@react-navigation/native';
+import {
+  BottomTabNavigationProp,
+  BottomTabScreenProps,
+  createBottomTabNavigator,
+} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {StyleSheet, Image} from 'react-native';
 import Stack1Screen1 from '../stack/stack1/Stack1Screen1';
 import Stack2 from '../stack/stack2/Stack2';
 
 const BottomTab = createBottomTabNavigator();
+
+export enum BottomTabScreens {
+  Stack1Screen1 = 'Stack 1 screen 1',
+  Stack2 = 'Stack 2',
+}
+
+export type BottomTabScreensParams = {
+  [BottomTabScreens.Stack1Screen1]: undefined;
+  [BottomTabScreens.Stack2]: undefined;
+};
+
+export type Stack1StackScreenProps<
+  RouteName extends keyof BottomTabScreensParams = BottomTabScreens,
+> = BottomTabScreenProps<BottomTabScreensParams, RouteName>;
+
+export type Stack1StackNavigationProp<
+  RouteName extends keyof BottomTabScreensParams = BottomTabScreens,
+> = BottomTabNavigationProp<BottomTabScreensParams, RouteName>;
+
+export type Stack1StackRouteProp<
+  RouteName extends keyof BottomTabScreensParams = BottomTabScreens,
+> = RouteProp<BottomTabScreensParams, RouteName>;
 
 const Stack1 = () => {
   const getOverviewTabIcon = (focused: boolean) => {
@@ -32,14 +59,14 @@ const Stack1 = () => {
   return (
     <BottomTab.Navigator screenOptions={{tabBarLabelStyle: {color: 'black'}}}>
       <BottomTab.Screen
-        name="Stack 1 screen 1"
+        name={BottomTabScreens.Stack1Screen1}
         component={Stack1Screen1}
         options={{
           tabBarLabel: 'Overview',
           tabBarIcon: ({focused}) => getOverviewTabIcon(focused),
         }}></BottomTab.Screen>
       <BottomTab.Screen
-        name="Stack 2"
+        name={BottomTabScreens.Stack2}
         component={Stack2}
         options={{
           tabBarLabel: 'Settings',

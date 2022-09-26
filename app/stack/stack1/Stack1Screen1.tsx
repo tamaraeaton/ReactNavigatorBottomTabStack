@@ -2,9 +2,10 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Button, StyleSheet, Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {Stack1Screens, Stack1StackNavigationProp} from './Stack1';
 
 const Stack1Screen1 = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<Stack1StackNavigationProp>();
 
   return (
     <SafeAreaView edges={['left', 'right', 'bottom']}>
@@ -12,7 +13,7 @@ const Stack1Screen1 = () => {
       <Button
         title="go to stack 1 screen 2"
         onPress={() => {
-          navigation.navigate('Stack 1 screen 2');
+          navigation.navigate(Stack1Screens.Stack1Screen2);
         }}></Button>
     </SafeAreaView>
   );
