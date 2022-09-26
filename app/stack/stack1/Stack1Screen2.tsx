@@ -6,7 +6,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 const Stack1Screen2 = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView>
+    <SafeAreaView edges={['left', 'right', 'bottom']}>
       <Text>stack 1 screen 2</Text>
       <Button
         title="go to stack 1 screen 1"

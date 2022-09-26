@@ -11,10 +11,12 @@ const Stack2 = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Stack 2 screen 1"
-        component={Stack2Screen1}></Stack.Screen>
+        component={Stack2Screen1}
+        options={{headerShown: false}}></Stack.Screen>
       <Stack.Screen
         name="Stack 2 screen 2"
-        component={Stack2Screen2}></Stack.Screen>
+        component={Stack2Screen2}
+        options={{headerBackTitle: 'Back'}}></Stack.Screen>
     </Stack.Navigator>
   );
 };

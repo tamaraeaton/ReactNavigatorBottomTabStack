@@ -7,7 +7,7 @@ const Stack1Screen1 = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView edges={['left', 'right', 'bottom']}>
       <Text>stack 1 screen 1</Text>
       <Button
         title="go to stack 1 screen 2"
