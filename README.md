@@ -12,4 +12,7 @@ This is a basic mobile navigator created by Tamara Eaton.
 
 # More Information
 
+![Alt text](AppExampleAndroid.png?raw=true 'Android Example')
+![Alt text](AppExampleIOS.png?raw=true 'IOS Example')
+
 Contact me at hatamara09@gmail.com
