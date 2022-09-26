@@ -8,7 +8,7 @@ import Stack1 from './app/stack/stack1/Stack1';
 const App = () => {
   return (
     <SafeAreaProvider>
-      <NavigationContainer children={{}}>
+      <NavigationContainer>
         <Stack1></Stack1>
       </NavigationContainer>
     </SafeAreaProvider>
