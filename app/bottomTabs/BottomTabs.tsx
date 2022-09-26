@@ -23,7 +23,7 @@ const Stack1 = () => {
       <Image
         style={[
           styles.image,
-          focused ? styles.overviewActive : styles.overviewInactive,
+          focused ? styles.settingsActive : styles.settingsInactive,
         ]}
         source={require('../assets/icons/settings.png')}></Image>
     );
@@ -42,6 +42,7 @@ const Stack1 = () => {
         name="Stack 2"
         component={Stack2}
         options={{
+          tabBarLabel: 'Settings',
           headerShown: false,
           tabBarIcon: ({focused}) => getSettingTabIcon(focused),
         }}></BottomTab.Screen>
@@ -59,6 +60,12 @@ const styles = StyleSheet.create({
     tintColor: 'blue',
   },
   overviewInactive: {
+    tintcolor: 'gray',
+  },
+  settingsActive: {
+    tintColor: 'red',
+  },
+  settingsInactive: {
     tintcolor: 'gray',
   },
 });
